@@ -42,6 +42,10 @@
                                         <td><?php echo $result->ip ?></td>
                                     </tr>
                                     <tr>
+                                        <td style="text-align: right;"><strong>Nome do PC/Notebook</strong></td>
+                                        <td><?php echo $result->nomePc ?></td>
+                                    </tr>
+                                    <tr>
                                         <td style="text-align: right;"><strong>S.O</strong></td>
                                         <td><?php echo $result->so ?></td>
                                     </tr>

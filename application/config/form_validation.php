@@ -117,6 +117,11 @@ $config = array('clientes' => array(array(
                                     'rules'=>'trim|xss_clean'
                                 ),
                                 array(
+                                    'field'=>'nomePc',
+                                    'label'=>'nomePc',
+                                    'rules'=>'trim|xss_clean'
+                                ),
+                                array(
                                     'field'=>'os',
                                     'label'=>'os',
                                     'rules'=>'trim|xss_clean'

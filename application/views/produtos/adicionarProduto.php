@@ -43,6 +43,12 @@
                             <input id="ip" type="text" name="ip" value="<?php echo set_value('ip'); ?>"  />
                         </div>
                     </div>
+                    <div class="control-group">
+                        <label for="nomePc" class="control-label">Nome do PC/Notebook</label>
+                        <div class="controls">
+                            <input id="nomePc" type="text" name="nomePc" value="<?php echo set_value('nomePc'); ?>"  />
+                        </div>
+                    </div>
                     
                     <div class="control-group">
                         <label for="so" class="control-label">S.O</label>

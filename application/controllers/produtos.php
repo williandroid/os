@@ -91,6 +91,7 @@ class Produtos extends CI_Controller {
                 'estoque' => set_value('estoque'),
                 'estoqueMinimo' => set_value('estoqueMinimo'),
                 'ip' => set_value('ip'),
+                'nomePc' => set_value('nomePc'),
                 'so' => $this->input->post('so')
             );
                       
@@ -140,6 +141,7 @@ class Produtos extends CI_Controller {
                 'estoque' => $this->input->post('estoque'),
                 'estoqueMinimo' => $this->input->post('estoqueMinimo'),
                 'ip' => $this->input->post('ip'),
+                'nomePc' => $this->input->post('nomePc'),
                 'so' => $this->input->post('so')
                 );
 
