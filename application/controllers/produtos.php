@@ -57,7 +57,7 @@ class Produtos extends CI_Controller {
 
         $this->pagination->initialize($config);
 
-        $this->data['results'] = $this->produtos_model->get('produtos', 'idProdutos,descricao,eqid,usuario,unidade,precoCompra,precoVenda,estoque,estoqueMinimo,ip,so', '', $config['per_page'], $this->uri->segment(3));
+        $this->data['results'] = $this->produtos_model->get('produtos', 'idProdutos,descricao,eqid,usuario,unidade,precoCompra,precoVenda,estoque,estoqueMinimo,ip,so, eqid, patrimonio, serie, local, dataCompra, dataGarantia, fornecedor', '', $config['per_page'], $this->uri->segment(3));
 
         $this->data['view'] = 'produtos/produtos';
         $this->load->view('tema/topo', $this->data);
@@ -93,6 +93,11 @@ class Produtos extends CI_Controller {
                 'estoqueMinimo' => set_value('estoqueMinimo'),
                 'ip' => set_value('ip'),
                 'nomePc' => set_value('nomePc'),
+                'serie' => set_value('serie'),
+                'local' => set_value('local'),
+                'fornecedor' => set_value('fornecedor'),
+                'dataCompra' => set_value('dataCompra'),
+                'dataGarantia' => set_value('dataGarantia'),
                 'so' => $this->input->post('so')
             );
 
@@ -140,6 +145,11 @@ class Produtos extends CI_Controller {
                 'estoqueMinimo' => $this->input->post('estoqueMinimo'),
                 'ip' => $this->input->post('ip'),
                 'nomePc' => $this->input->post('nomePc'),
+                'serie' => $this->input->post('serie'),
+                'local' => $this->input->post('local'),
+                'fornecedor' => $this->input->post('fornecedor'),
+                'dataCompra' => $this->input->post('dataCompra'),
+                'dataGarantia' => $this->input->post('dataGarantia'),
                 'so' => $this->input->post('so')
             );
 

@@ -38,6 +38,14 @@
                                         <td><?php echo $result->patrimonio ?></td>
                                     </tr>
                                     <tr>
+                                        <td style="text-align: right;"><strong>Série</strong></td>
+                                        <td><?php echo $result->serie ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: right;"><strong>Local</strong></td>
+                                        <td><?php echo $result->local ?></td>
+                                    </tr>
+                                    <tr>
                                         <td style="text-align: right;"><strong>IP</strong></td>
                                         <td><?php echo $result->ip ?></td>
                                     </tr>
@@ -45,6 +53,10 @@
                                         <td style="text-align: right;"><strong>Nome do PC/Notebook</strong></td>
                                         <td><?php echo $result->nomePc ?></td>
                                     </tr>
+                                    <tr>
+                                        <td style="text-align: right;"><strong>Fornecedor</strong></td>
+                                        <td><?php echo $result->fornecedor ?></td>
+                                    </tr>                                    
                                     <tr>
                                         <td style="text-align: right;"><strong>S.O</strong></td>
                                         <td><?php echo $result->so ?></td>
@@ -87,6 +99,14 @@
                                     <tr>
                                         <td style="text-align: right"><strong>Estoque Mínimo</strong></td>
                                         <td><?php echo $result->estoqueMinimo; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: right"><strong>Data Compra</strong></td>
+                                        <td><?php echo $result->dataCompra; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: right"><strong>Data Garantia</strong></td>
+                                        <td><?php echo $result->dataGarantia; ?></td>
                                     </tr>
                                 </tbody>
                             </table>

@@ -104,10 +104,11 @@ class Os_model extends CI_Model {
         $this->db->limit(20);
         $this->db->like('descricao', $q);
         $this->db->or_like('usuario',$q);
+        $this->db->or_like('eqid',$q);
         $query = $this->db->get('produtos');
         if($query->num_rows > 0){
             foreach ($query->result_array() as $row){
-                $row_set[] = array('label'=>$row['descricao'].' | Preço: R$ '.$row['precoVenda'].' | Estoque: '.$row['estoque'].' | Usuário: '.$row['usuario'],'estoque'=>$row['estoque'],'id'=>$row['idProdutos'],'preco'=>$row['precoVenda'],'eqid'=>$row['eqid']);
+                $row_set[] = array('label'=>$row['descricao'].' | EQID: '.$row['eqid']. ' | Preço: R$ '.$row['precoVenda'].' | Estoque: '.$row['estoque'].' | Usuário: '.$row['usuario'],'estoque'=>$row['estoque'],'id'=>$row['idProdutos'],'preco'=>$row['precoVenda'],'eqid'=>$row['eqid']);
             }
             echo json_encode($row_set);
         }

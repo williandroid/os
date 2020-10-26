@@ -127,6 +127,31 @@ $config = array('clientes' => array(array(
                                     'rules'=>'trim|xss_clean'
                                 ),
                                 array(
+                                    'field'=>'serie',
+                                    'label'=>'serie',
+                                    'rules'=>'trim|xss_clean'
+                                ),
+                                array(
+                                    'field'=>'local',
+                                    'label'=>'local',
+                                    'rules'=>'trim|xss_clean'
+                                ),
+                                array(
+                                    'field'=>'fornecedor',
+                                    'label'=>'fornecedor',
+                                    'rules'=>'trim|xss_clean'
+                                ),
+                                array(
+                                    'field'=>'dataCompra',
+                                    'label'=>'DataFinal',
+                                    'rules'=>'trim|xss_clean'
+                                ),
+                                array(
+                                    'field'=>'dataGarantia',
+                                    'label'=>'DataFinal',
+                                    'rules'=>'trim|xss_clean'
+                                ),    
+                                array(
                                     'field'=>'os',
                                     'label'=>'os',
                                     'rules'=>'trim|xss_clean'

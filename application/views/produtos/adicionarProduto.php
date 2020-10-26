@@ -33,13 +33,13 @@
                         </div>
                     </div>
                     
-                    <div class="span12" style="padding: 1%">
+<!--                    <div class="span12" style="padding: 1%">
                         <div class="span6">
                             <label for="cliente">Cliente<span class="required">*</span></label>
                             <input id="cliente" class="span12" type="text" name="cliente" value=""  />
                             <input id="clientes_id" class="span12" type="hidden" name="clientes_id" value=""  />
                         </div>
-                    </div>
+                    </div>-->
 
                     <div class="control-group">
                         <label for="patrimonio" class="control-label">Patrimônio</label>
@@ -47,7 +47,18 @@
                             <input id="patrimonio" type="text" name="patrimonio" value="<?php echo set_value('patrimonio'); ?>"  />
                         </div>
                     </div>
-
+                    <div class="control-group">
+                        <label for="serie" class="control-label">Série</label>
+                        <div class="controls">
+                            <input id="serie" type="text" name="serie" value="<?php echo set_value('serie'); ?>"  />
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label for="local" class="control-label">Local</label>
+                        <div class="controls">
+                            <input id="local" type="text" name="local" value="<?php echo set_value('local'); ?>"  />
+                        </div>
+                    </div>
                     <div class="control-group">
                         <label for="ip" class="control-label">IP</label>
                         <div class="controls">
@@ -60,14 +71,18 @@
                             <input id="nomePc" type="text" name="nomePc" value="<?php echo set_value('nomePc'); ?>"  />
                         </div>
                     </div>
-
+                    <div class="control-group">
+                        <label for="fornecedor" class="control-label">Fornecedor</label>
+                        <div class="controls">
+                            <input id="fornecedor" type="text" name="fornecedor" value="<?php echo set_value('fornecedor'); ?>"  />
+                        </div>
+                    </div>
                     <div class="control-group">
                         <label for="so" class="control-label">S.O</label>
                         <div class="controls">
                             <input id="so" type="text" name="so" value="<?php echo set_value('so'); ?>"  />
                         </div>
                     </div>
-
                     <div class="control-group">
                         <label for="unidade" class="control-label">Unidade<span class="required">*</span></label>
                         <div class="controls">
@@ -100,6 +115,18 @@
                         <label for="estoqueMinimo" class="control-label">Estoque Mínimo</label>
                         <div class="controls">
                             <input id="estoqueMinimo" type="text" name="estoqueMinimo" value="<?php echo set_value('estoqueMinimo'); ?>"  />
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label for="dataCompra" class="control-label">Data Compra</label>
+                        <div class="controls">
+                            <input id="dataCompra" type="text" name="dataCompra" value="<?php echo set_value('dataCompra'); ?>"  />
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label for="dataGarantia" class="control-label">Data Garantia</label>
+                        <div class="controls">
+                            <input id="dataGarantia" type="text" name="dataGarantia" value="<?php echo set_value('dataGarantia'); ?>"  />
                         </div>
                     </div>
 

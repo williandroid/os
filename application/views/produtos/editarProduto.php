@@ -34,6 +34,18 @@
                             <input id="patrimonio" type="text" name="patrimonio" value="<?php echo $result->patrimonio; ?>"  />
                         </div>
                     </div>
+                    <div class="control-group">
+                        <label for="serie" class="control-label">Série</label>
+                        <div class="controls">
+                            <input id="serie" type="text" name="serie" value="<?php echo $result->serie; ?>"  />
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label for="local" class="control-label">Local</label>
+                        <div class="controls">
+                            <input id="local" type="text" name="local" value="<?php echo $result->local; ?>"  />
+                        </div>
+                    </div>
 
                     <div class="control-group">
                         <label for="ip" class="control-label">IP<span class="required"></span></label>
@@ -47,7 +59,12 @@
                             <input id="nomePc" type="text" name="nomePc" value="<?php echo $result->nomePc; ?>"  />
                         </div>
                     </div>
-                    
+                    <div class="control-group">
+                        <label for="fornecedor" class="control-label">Fornecedor</label>
+                        <div class="controls">
+                            <input id="fornecedor" type="text" name="fornecedor" value="<?php echo $result->fornecedor; ?>"  />
+                        </div>
+                    </div>
                     <div class="control-group">
                         <label for="so" class="control-label">S.O<span class="required"></span></label>
                         <div class="controls">
@@ -87,6 +104,18 @@
                         <label for="estoqueMinimo" class="control-label">Estoque Mínimo</label>
                         <div class="controls">
                             <input id="estoqueMinimo" type="text" name="estoqueMinimo" value="<?php echo $result->estoqueMinimo; ?>"  />
+                        </div>
+                    </div>
+                        <div class="control-group">
+                        <label for="dataCompra" class="control-label">Data Compra</label>
+                        <div class="controls">
+                            <input id="dataCompra" type="text" name="dataCompra" value="<?php echo $result->dataCompra; ?>"  />
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label for="dataGarantia" class="control-label">Data Garantia</label>
+                        <div class="controls">
+                            <input id="dataGarantia" type="text" name="dataGarantia" value="<?php echo $result->dataGarantia; ?>"  />
                         </div>
                     </div>
 
