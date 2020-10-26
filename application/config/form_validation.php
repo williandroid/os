@@ -77,6 +77,11 @@ $config = array('clientes' => array(array(
                                     'rules'=>'trim|trim|xss_clean'
                                 ),
                                 array(
+                                    'field'=>'clientes_id',
+                                    'label'=>'clientes',
+                                    'rules'=>'trim|xss_clean'
+                                ),
+                                array(
                                     'field'=>'usuario',
                                     'label'=>'Usuario',
                                     'rules'=>'trim|trim|xss_clean'

@@ -55,6 +55,8 @@
                             <th>Data Inicial</th>
                             <th>Data Final</th>
                             <th>Cliente</th>
+                            <th>Descrição</th>
+                            <th>Técnico</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -67,10 +69,15 @@
                                 echo '<td>'.date('d/m/Y' ,strtotime($o->dataInicial)).'</td>';
                                 echo '<td>'.date('d/m/Y' ,strtotime($o->dataFinal)).'</td>';
                                 echo '<td>'.$o->nomeCliente.'</td>';
+                                echo '<td>'.$o->descricaoProduto.'</td>';
+                                echo '<td>'.$o->nome.'</td>';
                                 echo '<td>';
                                 if($this->permission->checkPermission($this->session->userdata('permissao'),'vOs')){
                                     echo '<a href="'.base_url().'index.php/os/visualizar/'.$o->idOs.'" class="btn"> <i class="icon-eye-open" ></i> </a> '; 
                                 }
+                                if($this->permission->checkPermission($this->session->userdata('permissao'),'eProduto')){
+                                    echo '<a style="margin-right: 1%" href="'.base_url().'index.php/os/editar/'.$o->idOs.'" class="btn btn-info tip-top" title="Editar OS"><i class="icon-pencil icon-white"></i></a>'; 
+            }
                                 echo '</td>';
                                 echo '</tr>';
                             }

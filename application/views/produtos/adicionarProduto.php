@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="<?php echo base_url();?>js/jquery-ui/css/smoothness/jquery-ui-1.9.2.custom.css" />
+<script type="text/javascript" src="<?php echo base_url()?>js/jquery-ui/js/jquery-ui-1.9.2.custom.js"></script>
+<script type="text/javascript" src="<?php echo base_url()?>js/jquery.validate.js"></script>
 <div class="row-fluid" style="margin-top:0">
     <div class="span12">
         <div class="widget-box">
@@ -16,7 +19,7 @@
                             <input id="descricao" type="text" name="descricao" value="<?php echo set_value('descricao'); ?>"  />
                         </div>
                     </div>
-                    
+
                     <div class="control-group">
                         <label for="eqid" class="control-label">EQ-ID</label>
                         <div class="controls">
@@ -30,6 +33,14 @@
                         </div>
                     </div>
                     
+                    <div class="span12" style="padding: 1%">
+                        <div class="span6">
+                            <label for="cliente">Cliente<span class="required">*</span></label>
+                            <input id="cliente" class="span12" type="text" name="cliente" value=""  />
+                            <input id="clientes_id" class="span12" type="hidden" name="clientes_id" value=""  />
+                        </div>
+                    </div>
+
                     <div class="control-group">
                         <label for="patrimonio" class="control-label">Patrimônio</label>
                         <div class="controls">
@@ -49,7 +60,7 @@
                             <input id="nomePc" type="text" name="nomePc" value="<?php echo set_value('nomePc'); ?>"  />
                         </div>
                     </div>
-                    
+
                     <div class="control-group">
                         <label for="so" class="control-label">S.O</label>
                         <div class="controls">
@@ -113,6 +124,17 @@
 <script src="<?php echo base_url(); ?>js/maskmoney.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
+         $("#cliente").autocomplete({
+            source: "<?php echo base_url(); ?>index.php/os/autoCompleteCliente",
+            minLength: 1,
+            select: function( event, ui ) {
+
+                 $("#clientes_id").val(ui.item.id);
+                
+
+            }
+      });
+        
         $(".money").maskMoney();
 
         $('#formProduto').validate({

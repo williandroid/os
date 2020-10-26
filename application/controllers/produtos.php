@@ -79,10 +79,11 @@ class Produtos extends CI_Controller {
             $precoCompra = $this->input->post('precoCompra');
             $precoCompra = str_replace(",", "", $precoCompra);
             $precoVenda = $this->input->post('precoVenda');
-            $precoVenda = str_replace(",", "", $precoVenda);          
+            $precoVenda = str_replace(",", "", $precoVenda);
             $data = array(
                 'descricao' => set_value('descricao'),
                 'eqid' => set_value('eqid'),
+                'clientes_id' => $this->input->post('clientes_id'),//set_value('idCliente'),
                 'usuario' => set_value('usuario'),
                 'patrimonio' => set_value('patrimonio'),
                 'unidade' => set_value('unidade'),
@@ -94,19 +95,16 @@ class Produtos extends CI_Controller {
                 'nomePc' => set_value('nomePc'),
                 'so' => $this->input->post('so')
             );
-                      
+
             if ($this->produtos_model->add('produtos', $data) == TRUE) {
                 $this->session->set_flashdata('success', 'Produto adicionado com sucesso!');
                 redirect(base_url() . 'index.php/produtos/adicionar/');
             } else {
                 $this->data['custom_error'] = '<div class="form_error"><p>An Error Occured.</p></div>';
             }
-            
         }
         $this->data['view'] = 'produtos/adicionarProduto';
         $this->load->view('tema/topo', $this->data);
-        
-        
     }
 
     function editar() {
@@ -143,7 +141,7 @@ class Produtos extends CI_Controller {
                 'ip' => $this->input->post('ip'),
                 'nomePc' => $this->input->post('nomePc'),
                 'so' => $this->input->post('so')
-                );
+            );
 
             if ($this->produtos_model->edit('produtos', $data, 'idProdutos', $this->input->post('idProdutos')) == TRUE) {
                 $this->session->set_flashdata('success', 'Produto editado com sucesso!');
@@ -211,5 +209,12 @@ class Produtos extends CI_Controller {
         $this->session->set_flashdata('success', 'Produto excluido com sucesso!');
         redirect(base_url() . 'index.php/produtos/gerenciar/');
     }
+    public function autoCompleteCliente(){
 
+        if (isset($_GET['term'])){
+            $q = strtolower($_GET['term']);
+            $this->os_model->autoCompleteCliente($q);
+        }
+
+    }
 }
