@@ -83,7 +83,7 @@ class Produtos extends CI_Controller {
             $data = array(
                 'descricao' => set_value('descricao'),
                 'eqid' => set_value('eqid'),
-                'clientes_id' => $this->input->post('clientes_id'),//set_value('idCliente'),
+                //'clientes_id' => $this->input->post('clientes_id'),//set_value('idCliente'),
                 'usuario' => set_value('usuario'),
                 'patrimonio' => set_value('patrimonio'),
                 'unidade' => set_value('unidade'),

@@ -151,16 +151,16 @@
 <script src="<?php echo base_url(); ?>js/maskmoney.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
-         $("#cliente").autocomplete({
-            source: "<?php echo base_url(); ?>index.php/os/autoCompleteCliente",
-            minLength: 1,
-            select: function( event, ui ) {
-
-                 $("#clientes_id").val(ui.item.id);
-                
-
-            }
-      });
+//         $("#cliente").autocomplete({
+//            source: "<?php //echo base_url(); ?>index.php/os/autoCompleteCliente",
+//            minLength: 1,
+//            select: function( event, ui ) {
+//
+//                 $("#clientes_id").val(ui.item.id);
+//                
+//
+//            }
+//      });
         
         $(".money").maskMoney();
 
