@@ -57,7 +57,7 @@ class Produtos extends CI_Controller {
 
         $this->pagination->initialize($config);
 
-        $this->data['results'] = $this->produtos_model->get('produtos', 'idProdutos,descricao,eqid,usuario,unidade,precoCompra,precoVenda,estoque,estoqueMinimo,ip,so, eqid, patrimonio, serie, local, dataCompra, dataGarantia, fornecedor', '', $config['per_page'], $this->uri->segment(3));
+        $this->data['results'] = $this->produtos_model->get('produtos', 'idProdutos,descricao,eqid,usuario,unidade,precoCompra,precoVenda,estoque,estoqueMinimo,ip,so, eqid, patrimonio, serie, local, dataCompra, dataGarantia, fornecedor, obs', '', $config['per_page'], $this->uri->segment(3));
 
         $this->data['view'] = 'produtos/produtos';
         $this->load->view('tema/topo', $this->data);
@@ -98,6 +98,7 @@ class Produtos extends CI_Controller {
                 'fornecedor' => set_value('fornecedor'),
                 'dataCompra' => set_value('dataCompra'),
                 'dataGarantia' => set_value('dataGarantia'),
+                'obs' => set_value('obs'),
                 'so' => $this->input->post('so')
             );
 
@@ -150,6 +151,7 @@ class Produtos extends CI_Controller {
                 'fornecedor' => $this->input->post('fornecedor'),
                 'dataCompra' => $this->input->post('dataCompra'),
                 'dataGarantia' => $this->input->post('dataGarantia'),
+                'obs' => $this->input->post('obs'),
                 'so' => $this->input->post('so')
             );
 

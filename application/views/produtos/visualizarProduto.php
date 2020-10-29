@@ -108,6 +108,10 @@
                                         <td style="text-align: right"><strong>Data Garantia</strong></td>
                                         <td><?php echo $result->dataGarantia; ?></td>
                                     </tr>
+                                    <tr>
+                                        <td style="text-align: right"><strong>Observação</strong></td>
+                                        <td><?php echo $result->obs; ?></td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
