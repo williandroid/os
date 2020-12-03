@@ -9,9 +9,9 @@
             </div>
             <div class="widget-content">
                 <ul class="site-stats">
-                    <li><a target="_blank" href="<?php echo base_url()?>index.php/relatorios/produtosRapid"><i class="icon-barcode"></i> <small>Todos os Produtos</small></a></li>
-                    <li><a target="_blank" href="<?php echo base_url()?>index.php/relatorios/produtosRapidMin"><i class="icon-barcode"></i> <small>Com Estoque Mínimo</small></a></li>
-                    
+                    <li><a target="_blank" href="<?php echo base_url() ?>index.php/relatorios/produtosRapid"><i class="icon-barcode"></i> <small>Todos os Produtos</small></a></li>
+                    <li><a target="_blank" href="<?php echo base_url() ?>index.php/relatorios/produtosRapidMin"><i class="icon-barcode"></i> <small>Com Estoque Mínimo</small></a></li>
+
                 </ul>
             </div>
         </div>
@@ -25,9 +25,36 @@
                 </span>
                 <h5>Relatórios Customizáveis</h5>
             </div>
-            <div class="widget-content">
+            <form target="_blank" action="<?php echo base_url() ?>index.php/relatorios/produtosLocal" method="get">
                 <div class="span12 well">
                     <div class="span12 alert alert-info">Deixe em branco caso não deseje utilizar o parâmetro.</div>
+                    <div class="span6">
+                        <label for="">Local:</label>
+                        <input type="text" name="local" class="span12" />
+                    </div>
+                    <div class="span12" style="margin-left: 0; ">
+                        <input type="reset" class="btn" value="Limpar" />
+                        <button class="btn btn-inverse"><i class="icon-print icon-white"></i> Imprimir</button>
+                    </div>
+                </div>
+            </form>
+
+            <form target="_blank" action="<?php echo base_url() ?>index.php/relatorios/produtosScript" method="get">
+                <div class="span12 well">
+                    <div class="span6">
+                        <label for="">Script: SELECT ... </label>
+                        <input type="text" name="codigo" class="span12" />
+                    </div>
+                    <div class="span12" style="margin-left: 0; ">
+                        <input type="reset" class="btn" value="Limpar" />
+                        <button class="btn btn-inverse"><i class="icon-print icon-white"></i> Imprimir</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="widget-content">
+                <div class="span12 well">
+                    <!--<div class="span12 alert alert-info">Deixe em branco caso não deseje utilizar o parâmetro.</div>-->
                     <form target="_blank" action="<?php echo base_url() ?>index.php/relatorios/produtosCustom" method="get">
                         <div class="span12 well">
                             <div class="span6">
@@ -49,11 +76,13 @@
                                 <input type="text" name="estoqueFinal" class="span12" />
                             </div>
                         </div>
-                        <div class="span12" style="margin-left: 0; text-align: center">
+                        <div class="span12" style="margin-left: 0;">
                             <input type="reset" class="btn" value="Limpar" />
                             <button class="btn btn-inverse"><i class="icon-print icon-white"></i> Imprimir</button>
                         </div>
                     </form>
+
+
                 </div>
                 .
             </div>
@@ -62,11 +91,11 @@
 </div>
 
 
-<script src="<?php echo base_url();?>js/maskmoney.js"></script>
+<script src="<?php echo base_url(); ?>js/maskmoney.js"></script>
 <script type="text/javascript">
-    $(document).ready(function(){
+    $(document).ready(function () {
         $(".money").maskMoney();
 
-      
+
     });
 </script>

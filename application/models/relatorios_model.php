@@ -116,6 +116,24 @@ class Relatorios_model extends CI_Model {
         $query = "SELECT * FROM produtos WHERE estoque >= 0 $wherePreco $whereEstoque";
         return $this->db->query($query)->result();
     }
+    
+    public function produtosLocal($localEquipamento = null){   
+        $this->db->select('*');
+        $this->db->like('local', $localEquipamento);
+        $this->db->order_by('eqid','desc');
+        //$query = $this->db->get('produtos');        
+        //var_dump($this->db->queries[2]);
+        
+        //$data['produtos'] = $this->db->get('produtos')->result();   
+        //var_dump($data);
+        return $this->db->get('produtos')->result();
+    }
+    
+    public function produtosScript($codigo = null){   
+        
+        $query = "SELECT $codigo";
+        return $this->db->query($query)->result();
+    }
 
     public function servicosCustom($precoInicial = null,$precoFinal = null){
         $query = "SELECT * FROM servicos WHERE preco BETWEEN ? AND ?";
